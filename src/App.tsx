@@ -69,10 +69,52 @@ function App() {
         </div>
       )}
 
-      {/* 底部 */}
-      <footer className="border-t border-white/5 mt-12 py-6 text-center text-white/20 text-xs">
-        <p>RedCover · 小红书封面制作工具 · 纯浏览器处理 · 不上传任何数据</p>
-        <p className="mt-1">免费使用 · 无需注册</p>
+      {/* Tool Network Footer */}
+      <footer className="border-t border-white/5 mt-12 bg-black/20">
+        {/* Google AdSense Placeholder */}
+        <div className="max-w-7xl mx-auto px-4 pt-6">
+          <div className="bg-white/5 border border-dashed border-white/10 rounded-lg p-4 text-center text-white/20 text-xs">
+            {"Google AdSense 广告位"}
+          </div>
+        </div>
+
+        {/* Tool Network Links */}
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <h3 className="text-sm font-semibold text-white/40 mb-3 text-center">🛠️ Tool Network</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { name: 'AI Tools Box', href: 'https://tyr1105.github.io/ai-tools-box/' },
+              { name: 'DevKit Tools', href: 'https://tyr1105.github.io/devkit-tools/' },
+              { name: 'PicTool', href: 'https://tyr1105.github.io/pictool/' },
+              { name: 'QRGen', href: 'https://tyr1105.github.io/qrgen/' },
+              { name: 'RedCover', href: 'https://tyr1105.github.io/redcover/' },
+              { name: 'ResumeCraft', href: 'https://tyr1105.github.io/resumecraft/' },
+              { name: 'ShotPro', href: 'https://tyr1105.github.io/shotpro/' },
+              { name: 'WriteBoom', href: 'https://tyr1105.github.io/writeboom/' },
+              { name: 'PDFKit', href: 'https://tyr1105.github.io/pdfkit/' },
+            ].map(tool => (
+              <a
+                key={tool.name}
+                href={tool.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 bg-white/5 rounded-full border border-white/10 text-xs text-white/40 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/30 transition-colors"
+              >
+                {tool.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* 支持作者 */}
+        <div className="max-w-7xl mx-auto px-4 pb-6 text-center">
+          <p className="text-sm text-white/30 mb-2">☕ 支持作者</p>
+          <p className="text-xs text-white/20">如果这些工具对你有帮助，欢迎分享给朋友或 Star 支持！</p>
+        </div>
+
+        <div className="border-t border-white/5 py-4 text-center text-white/15 text-xs">
+          RedCover · 小红书封面制作工具 · 纯浏览器处理 · 不上传任何数据 · 免费使用 · 无需注册
+        </div>
       </footer>
     </div>
   )
